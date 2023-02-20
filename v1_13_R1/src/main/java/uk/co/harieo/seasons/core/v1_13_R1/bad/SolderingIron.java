@@ -24,11 +24,40 @@ import uk.co.harieo.seasons.plugin.models.effect.TickableEffect;
 
 public class SolderingIron extends Effect implements TickableEffect {
 
-	private static final Material[] SOLDERING_ITEMS = {Material.BUCKET, Material.IRON_INGOT, Material.IRON_BLOCK,
-			Material.IRON_DOOR, Material.IRON_HELMET, Material.IRON_CHESTPLATE, Material.IRON_LEGGINGS,
-			Material.IRON_BOOTS, Material.ANVIL, Material.IRON_NUGGET, Material.IRON_BARS, Material.IRON_TRAPDOOR,
-			Material.CHAINMAIL_HELMET, Material.CHAINMAIL_CHESTPLATE, Material.CHAINMAIL_LEGGINGS,
-			Material.CHAINMAIL_BOOTS, Material.WATER_BUCKET, Material.LAVA_BUCKET};
+	private static final Material[] SOLDERING_ITEMS = {
+			Material.IRON_BLOCK,
+			Material.IRON_BARS,
+			Material.CHAIN,
+			Material.ANVIL,
+			Material.CHIPPED_ANVIL,
+			Material.DAMAGED_ANVIL,
+			Material.HEAVY_WEIGHTED_PRESSURE_PLATE,
+			Material.HOPPER,
+			Material.IRON_DOOR,
+			Material.IRON_TRAPDOOR,
+			Material.MINECART,
+			Material.CHEST_MINECART,
+			Material.FURNACE_MINECART,
+			Material.TNT_MINECART,
+			Material.HOPPER_MINECART,
+			Material.RAW_IRON,
+			Material.IRON_INGOT,
+			Material.BUCKET,
+			Material.LAVA_BUCKET,
+			Material.IRON_NUGGET,
+			Material.COMPASS,
+			Material.RECOVERY_COMPASS,
+			Material.SHEARS,
+			Material.CHAINMAIL_HELMET,
+			Material.CHAINMAIL_CHESTPLATE,
+			Material.CHAINMAIL_LEGGINGS,
+			Material.CHAINMAIL_BOOTS,
+			Material.IRON_HELMET,
+			Material.IRON_CHESTPLATE,
+			Material.IRON_LEGGINGS,
+			Material.IRON_BOOTS,
+			Material.SHIELD,
+	};
 
 	private Map<Player, Integer> secondsPast = new HashMap<>();
 
