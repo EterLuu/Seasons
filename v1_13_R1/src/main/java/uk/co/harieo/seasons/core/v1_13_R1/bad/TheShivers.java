@@ -1,5 +1,6 @@
 package uk.co.harieo.seasons.core.v1_13_R1.bad;
 
+import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -41,6 +42,9 @@ public class TheShivers extends Effect implements TickableEffect {
 	 * @param player to check and mark
 	 */
 	private void damage(Player player) {
+		if (PlaceholderAPI.setPlaceholders(player,"%projectkorra_element%").contains("Water")){
+			return;
+		}
 		if (isPlayerCycleApplicable(player) && !player.isInsideVehicle()) {
 			Block block = player.getLocation().getBlock();
 			if (block.getType() == Material.WATER && !(player.getVehicle() instanceof Boat)) {

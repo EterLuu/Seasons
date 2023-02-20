@@ -1,5 +1,6 @@
 package uk.co.harieo.seasons.core.v1_13_R1.bad;
 
+import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -30,6 +31,9 @@ public class StrongCurrent extends SeasonsPotionEffect {
 
 	@Override
 	public boolean shouldGive(Player player) {
+		if (PlaceholderAPI.setPlaceholders(player,"%projectkorra_element%").contains("Water")){
+			return false;
+		}
 		if (isPlayerCycleApplicable(player) && !player.isInsideVehicle()) {
 			Block block = player.getLocation().getBlock();
 			return block.getType() == Material.WATER;
