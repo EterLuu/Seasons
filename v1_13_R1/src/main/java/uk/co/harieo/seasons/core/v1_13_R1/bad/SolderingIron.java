@@ -6,6 +6,7 @@ import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.EntityPickupItemEvent;
+import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerItemHeldEvent;
@@ -171,4 +172,8 @@ public class SolderingIron extends Effect implements TickableEffect {
 		secondsPast.remove(event.getPlayer());
 	}
 
+	@EventHandler
+	public void onPlayerDeath(PlayerDeathEvent event) {
+		secondsPast.remove(event.getEntity().getPlayer());
+	}
 }
